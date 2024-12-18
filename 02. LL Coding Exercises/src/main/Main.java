@@ -9,13 +9,15 @@ public class Main {
         myLinkedList.append(4);
         myLinkedList.append(5);
 
-        myLinkedList.getTail().next = myLinkedList.getHead().next;
+        //myLinkedList.getTail().next = myLinkedList.getHead().next;
 
 
         //myLinkedList.print();
 
         //System.out.println(myLinkedList.findMiddleNode().value);
-        System.out.println(myLinkedList.hasLoop());
+        //System.out.println(myLinkedList.hasLoop());
+
+        System.out.println(myLinkedList.findKthFromEnd(5).value);
 
 
     }
