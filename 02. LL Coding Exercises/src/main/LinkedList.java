@@ -1,3 +1,5 @@
+package main;
+
 public class LinkedList {
 
     private Node head;
@@ -24,6 +26,19 @@ public class LinkedList {
         tail = newNode;
     }
 
+    public Node getTail() {
+        return tail;
+    }
+
+    public Node getHead() {
+        return head;
+    }
+
+    public void makeEmpty() {
+        this.head = null;
+        this.tail = null;
+    }
+
     public void print() {
         Node tmp = head;
         while (tmp != null) {
@@ -45,6 +60,19 @@ public class LinkedList {
     }
 
 
+    public boolean hasLoop() {
+        Node slow = head;
+        Node fast = head;
+
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+
+            if (fast == slow) return true;
+        }
+
+        return false;
+    }
 
 
 }
